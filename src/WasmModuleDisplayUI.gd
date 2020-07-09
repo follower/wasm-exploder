@@ -19,3 +19,7 @@ func display_exploded_wasm_module(wasm_file_path: String):
     prints("Selected file:", wasm_file_path)
 
     UI_EXTERN_LIST.clear()
+
+    var root: TreeItem = UI_EXTERN_LIST.create_item()
+    root.set_text(0, wasm_file_path.get_file())
+    root.set_tooltip(0, wasm_file_path)
