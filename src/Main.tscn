@@ -46,7 +46,7 @@ placeholder_text = ".wasm file path"
 margin_left = 842.0
 margin_right = 974.0
 margin_bottom = 24.0
-text = "Select WASM file..."
+text = "Open WASM file..."
 
 [node name="DisplayUI" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 46.0
