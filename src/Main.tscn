@@ -26,7 +26,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LAbelAppTitle" type="Label" parent="VBoxContainer"]
+[node name="LabelAppTitle" type="Label" parent="VBoxContainer"]
 margin_right = 974.0
 margin_bottom = 14.0
 text = "WASM Exploder"
