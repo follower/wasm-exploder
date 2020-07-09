@@ -54,6 +54,7 @@ margin_top = 46.0
 margin_right = 974.0
 margin_bottom = 550.0
 size_flags_vertical = 3
+script = ExtResource( 2 )
 
 [node name="ExternList" type="Tree" parent="VBoxContainer/WasmModuleDisplayUI"]
 margin_right = 485.0
