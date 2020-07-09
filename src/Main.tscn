@@ -37,13 +37,13 @@ margin_right = 974.0
 margin_bottom = 42.0
 
 [node name="WasmFilePath" type="LineEdit" parent="VBoxContainer/FileSelectionUI"]
-margin_right = 838.0
+margin_right = 842.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 placeholder_text = ".wasm file path"
 
 [node name="ButtonSelectWasmFile" type="Button" parent="VBoxContainer/FileSelectionUI"]
-margin_left = 842.0
+margin_left = 846.0
 margin_right = 974.0
 margin_bottom = 24.0
 text = "Open WASM file..."
