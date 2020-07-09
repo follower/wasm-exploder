@@ -22,3 +22,10 @@ func _on_DialogSelectWasmFile_file_selected(path: String) -> void:
     INPUT_WASM_FILE_PATH.text = path
 
     UI_WASM_DISPLAY.call_deferred("display_exploded_wasm_module", INPUT_WASM_FILE_PATH.text)
+
+
+func _on_DialogSelectWasmFile_about_to_show() -> void:
+
+    # Workaround (bug?) where window title seems to get reverted to default "open" value.
+
+    $"DialogSelectWasmFile".window_title = "Select WASM File..."

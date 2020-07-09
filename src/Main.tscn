@@ -94,4 +94,5 @@ filters = PoolStringArray( "*.wasm;WebAssembly Binary" )
 current_dir = ""
 current_path = ""
 [connection signal="pressed" from="VBoxContainer/FileSelectionUI/ButtonSelectWasmFile" to="." method="_on_ButtonSelectWasmFile_pressed"]
+[connection signal="about_to_show" from="DialogSelectWasmFile" to="." method="_on_DialogSelectWasmFile_about_to_show"]
 [connection signal="file_selected" from="DialogSelectWasmFile" to="." method="_on_DialogSelectWasmFile_file_selected"]
