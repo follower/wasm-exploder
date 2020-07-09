@@ -3,12 +3,12 @@
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://WasmModuleDisplayUI.gd" type="Script" id=2]
 
-[sub_resource type="InputEventAction" id=2]
+[sub_resource type="InputEventAction" id=1]
 action = "ui_open_file"
 pressed = true
 
-[sub_resource type="ShortCut" id=1]
-shortcut = SubResource( 2 )
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
 
 [node name="MainUI" type="Control"]
 anchor_right = 1.0
@@ -54,7 +54,7 @@ placeholder_text = ".wasm file path"
 margin_left = 846.0
 margin_right = 974.0
 margin_bottom = 24.0
-shortcut = SubResource( 1 )
+shortcut = SubResource( 2 )
 text = "Open WASM file..."
 
 [node name="WasmModuleDisplayUI" type="HBoxContainer" parent="VBoxContainer"]
