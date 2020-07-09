@@ -23,3 +23,12 @@ func display_exploded_wasm_module(wasm_file_path: String):
     var root: TreeItem = UI_EXTERN_LIST.create_item()
     root.set_text(0, wasm_file_path.get_file())
     root.set_tooltip(0, wasm_file_path)
+
+    module = wasm_engine.load_wasm_from_file(wasm_file_path)
+
+
+    var exports_item: TreeItem = UI_EXTERN_LIST.create_item(root)
+    exports_item.set_text(0, "Exports (%d)" % module.exports.size())
+
+    var imports_item: TreeItem = UI_EXTERN_LIST.create_item(root)
+    imports_item.set_text(0, "Imports (%d)" % module.imports.size())
