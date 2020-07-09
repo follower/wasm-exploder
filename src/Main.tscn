@@ -48,18 +48,18 @@ margin_right = 974.0
 margin_bottom = 24.0
 text = "Open WASM file..."
 
-[node name="DisplayUI" type="HBoxContainer" parent="VBoxContainer"]
+[node name="WasmModuleDisplayUI" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 46.0
 margin_right = 974.0
 margin_bottom = 550.0
 size_flags_vertical = 3
 
-[node name="ExternList" type="Tree" parent="VBoxContainer/DisplayUI"]
+[node name="ExternList" type="Tree" parent="VBoxContainer/WasmModuleDisplayUI"]
 margin_right = 485.0
 margin_bottom = 504.0
 size_flags_horizontal = 3
 
-[node name="DetailView" type="VBoxContainer" parent="VBoxContainer/DisplayUI"]
+[node name="DetailView" type="VBoxContainer" parent="VBoxContainer/WasmModuleDisplayUI"]
 margin_left = 489.0
 margin_right = 974.0
 margin_bottom = 504.0
