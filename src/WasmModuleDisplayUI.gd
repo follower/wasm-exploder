@@ -1,7 +1,13 @@
 extends Control
 
+var wasm = preload("res://addons/wasm-engine/WasmEngine.gd") # TODO: Handle properly
+var wasm_engine
+var module
+
+
 func _ready():
-    pass
+
+    wasm_engine = wasm.WasmEngine.new()
 
 
 # TODO: Pass loaded module instead?
