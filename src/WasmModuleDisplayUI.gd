@@ -13,6 +13,9 @@ func _ready():
     wasm_engine = wasm.WasmEngine.new()
 
 
+const MAX_EXPORTS_TO_DISPLAY: int = 20
+const MAX_IMPORTS_TO_DISPLAY: int = MAX_EXPORTS_TO_DISPLAY
+
 # TODO: Pass loaded module instead?
 func display_exploded_wasm_module(wasm_file_path: String):
 
@@ -32,3 +35,11 @@ func display_exploded_wasm_module(wasm_file_path: String):
 
     var imports_item: TreeItem = UI_EXTERN_LIST.create_item(root)
     imports_item.set_text(0, "Imports (%d)" % module.imports.size())
+
+
+    for index in range(min(MAX_EXPORTS_TO_DISPLAY, module.exports.size())):
+
+        var current_export = module.exports.get_index(index)
+
+        var current_item: TreeItem = UI_EXTERN_LIST.create_item(exports_item)
+        current_item.set_text(0, current_export.name)
