@@ -42,4 +42,4 @@ func display_exploded_wasm_module(wasm_file_path: String):
         var current_export = module.exports.get_index(index)
 
         var current_item: TreeItem = UI_EXTERN_LIST.create_item(exports_item)
-        current_item.set_text(0, current_export.name)
+        current_item.set_text(1, current_export.name)
