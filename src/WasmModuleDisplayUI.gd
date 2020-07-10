@@ -23,6 +23,11 @@ func display_exploded_wasm_module(wasm_file_path: String):
 
     UI_EXTERN_LIST.clear()
 
+    UI_EXTERN_LIST.set_column_min_width(0, 8)
+    UI_EXTERN_LIST.set_column_min_width(1, 2)
+    UI_EXTERN_LIST.set_column_expand(0, true)
+    UI_EXTERN_LIST.set_column_expand(1, true)
+
     var root: TreeItem = UI_EXTERN_LIST.create_item()
     root.set_text(0, wasm_file_path.get_file())
     root.set_tooltip(0, wasm_file_path)
@@ -43,3 +48,8 @@ func display_exploded_wasm_module(wasm_file_path: String):
 
         var current_item: TreeItem = UI_EXTERN_LIST.create_item(exports_item)
         current_item.set_text(0, current_export.name)
+
+        # TODO: Use an icon?
+        var current_item_type_indicator = wasm.extern_kind_as_string(current_export.type).substr(0,1).to_upper()
+        current_item.set_tooltip(1, wasm.extern_kind_as_string(current_export.type))
+        current_item.set_text(1, "%s" % [current_item_type_indicator])
