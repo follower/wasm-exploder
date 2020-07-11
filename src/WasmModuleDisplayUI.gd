@@ -60,6 +60,11 @@ func display_exploded_wasm_module(wasm_file_path: String):
         current_item.set_tooltip(1, wasm.extern_kind_as_string(current_export.type))
         current_item.set_text(1, "%s" % [current_item_type_indicator])
 
+    if MAX_EXPORTS_TO_DISPLAY < module.exports.size():
+        var current_item: TreeItem = UI_EXTERN_LIST.create_item(exports_item)
+        current_item.set_text(0, "...")
+        current_item.set_text_align(0, TreeItem.ALIGN_CENTER)
+
     UI_EXTERN_LIST.grab_focus()
     exports_item.select(0)
 
@@ -76,6 +81,10 @@ func display_exploded_wasm_module(wasm_file_path: String):
         current_item.set_tooltip(1, wasm.extern_kind_as_string(current_import.type))
         current_item.set_text(1, "%s" % [current_item_type_indicator])
 
+    if MAX_IMPORTS_TO_DISPLAY < module.imports.size():
+        var current_item: TreeItem = UI_EXTERN_LIST.create_item(imports_item)
+        current_item.set_text(0, "...")
+        current_item.set_text_align(0, TreeItem.ALIGN_CENTER)
 
 
     self.find_parent("MainUI").get_node("DialogBusyOverlay").hide()
