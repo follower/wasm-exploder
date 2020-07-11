@@ -32,6 +32,10 @@ func display_exploded_wasm_module(wasm_file_path: String):
     root.set_text(0, wasm_file_path.get_file())
     root.set_tooltip(0, wasm_file_path)
 
+
+    # TODO: Handle WASM in background thread?
+    yield(self.find_parent("MainUI").get_node("DialogBusyOverlay").show(), "completed")
+
     module = wasm_engine.load_wasm_from_file(wasm_file_path)
 
 
@@ -53,3 +57,6 @@ func display_exploded_wasm_module(wasm_file_path: String):
         var current_item_type_indicator = wasm.extern_kind_as_string(current_export.type).substr(0,1).to_upper()
         current_item.set_tooltip(1, wasm.extern_kind_as_string(current_export.type))
         current_item.set_text(1, "%s" % [current_item_type_indicator])
+
+
+    self.find_parent("MainUI").get_node("DialogBusyOverlay").hide()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://WasmModuleDisplayUI.gd" type="Script" id=2]
+[ext_resource path="res://DialogBusyOverlay.gd" type="Script" id=3]
 
 [sub_resource type="InputEventAction" id=1]
 action = "ui_open_file"
@@ -88,12 +89,20 @@ margin_bottom = 200.0
 popup_exclusive = true
 window_title = "Select WASM File..."
 resizable = true
-dialog_hide_on_ok = true
 mode = 0
 access = 2
 filters = PoolStringArray( "*.wasm;WebAssembly Binary" )
 current_dir = ""
 current_path = ""
+
+[node name="DialogBusyOverlay" type="ColorRect" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.5 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_default_cursor_shape = 5
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 3 )
 [connection signal="pressed" from="VBoxContainer/FileSelectionUI/ButtonSelectWasmFile" to="." method="_on_ButtonSelectWasmFile_pressed"]
 [connection signal="about_to_show" from="DialogSelectWasmFile" to="." method="_on_DialogSelectWasmFile_about_to_show"]
 [connection signal="file_selected" from="DialogSelectWasmFile" to="." method="_on_DialogSelectWasmFile_file_selected"]
