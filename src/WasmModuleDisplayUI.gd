@@ -60,6 +60,9 @@ func display_exploded_wasm_module(wasm_file_path: String):
         current_item.set_tooltip(1, wasm.extern_kind_as_string(current_export.type))
         current_item.set_text(1, "%s" % [current_item_type_indicator])
 
+    UI_EXTERN_LIST.grab_focus()
+    exports_item.select(0)
+
 
     for index in range(min(MAX_IMPORTS_TO_DISPLAY, module.imports.size())):
 
