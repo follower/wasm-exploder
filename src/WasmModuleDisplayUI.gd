@@ -8,6 +8,8 @@ var wasm_engine
 var module
 
 
+# TODO: Export `wasm_file_path` instead?
+
 func _ready():
 
     wasm_engine = wasm.WasmEngine.new()
