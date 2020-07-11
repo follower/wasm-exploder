@@ -70,6 +70,7 @@ margin_right = 485.0
 margin_bottom = 504.0
 size_flags_horizontal = 3
 columns = 2
+select_mode = 1
 
 [node name="DetailView" type="VBoxContainer" parent="VBoxContainer/WasmModuleDisplayUI"]
 margin_left = 489.0
