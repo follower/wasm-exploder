@@ -15,7 +15,7 @@ func _ready():
     wasm_engine = wasm.WasmEngine.new()
 
 
-const MAX_EXPORTS_TO_DISPLAY: int = 20
+const MAX_EXPORTS_TO_DISPLAY: int = 50
 const MAX_IMPORTS_TO_DISPLAY: int = MAX_EXPORTS_TO_DISPLAY
 
 # TODO: Pass loaded module instead?
