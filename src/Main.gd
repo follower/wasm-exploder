@@ -21,7 +21,7 @@ func _on_ButtonSelectWasmFile_pressed() -> void:
 func _on_DialogSelectWasmFile_file_selected(path: String) -> void:
     INPUT_WASM_FILE_PATH.text = path
 
-    UI_WASM_DISPLAY.call_deferred("display_exploded_wasm_module", INPUT_WASM_FILE_PATH.text)
+    UI_WASM_DISPLAY.display_exploded_wasm_module(INPUT_WASM_FILE_PATH.text)
 
 
 func _on_DialogSelectWasmFile_about_to_show() -> void:
