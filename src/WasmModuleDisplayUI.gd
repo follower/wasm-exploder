@@ -12,6 +12,8 @@ var module
 
 func _ready():
 
+    self._resetDetailView()
+
     wasm_engine = wasm.WasmEngine.new()
 
 
@@ -86,3 +88,14 @@ func display_exploded_wasm_module(wasm_file_path: String):
 
 
     self.find_parent("MainUI").get_node("DialogBusyOverlay").hide()
+
+
+func _resetDetailView():
+
+    $"DetailView/LabelParamTypes".visible = false
+    $"DetailView/LabelType".visible = true
+
+    $"DetailView/HBoxContainer/LabelResultTypes".text = ""
+    $"DetailView/HBoxContainer/LabelName".text = ""
+    $"DetailView/LabelType".text = ""
+    $"DetailView/LabelParamTypes".text = ""
