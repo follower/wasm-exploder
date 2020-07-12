@@ -103,6 +103,7 @@ margin_top = 58.0
 margin_right = 1150.0
 margin_bottom = 686.0
 size_flags_vertical = 3
+custom_constants/separation = 25
 script = ExtResource( 2 )
 
 [node name="ExternList" type="Tree" parent="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI"]
@@ -120,6 +121,7 @@ margin_left = 577.0
 margin_right = 1150.0
 margin_bottom = 628.0
 size_flags_horizontal = 3
+custom_constants/separation = 15
 
 [node name="DialogSelectWasmFile" type="FileDialog" parent="."]
 anchor_left = 0.5
