@@ -9,8 +9,6 @@ onready var UI_WASM_DISPLAY: Control = self.find_node("WasmModuleDisplayUI", tru
 
 func _ready():
 
-    $"ColorRectBackground".color = $"ColorRectBackground".color.lightened(0.25)
-
     BUTTON_OPEN_WASM_FILE.grab_focus()
 
 
