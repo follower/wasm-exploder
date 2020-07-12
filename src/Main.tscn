@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://WasmModuleDisplayUI.gd" type="Script" id=2]
@@ -25,6 +25,12 @@ bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.66, 0.61, 0.97, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
+draw_center = false
+border_width_bottom = 1
+border_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
 
 [node name="MainUI" type="Control"]
 anchor_right = 1.0
@@ -163,6 +169,21 @@ margin_bottom = 121.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
 text = "{extern_type}"
+
+[node name="LabelAboutLink" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI/DetailView"]
+margin_left = 413.0
+margin_top = 607.0
+margin_right = 563.0
+margin_bottom = 628.0
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
+text = "About WASM Exploder"
+align = 2
 
 [node name="DialogSelectWasmFile" type="FileDialog" parent="."]
 anchor_left = 0.5
