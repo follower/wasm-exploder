@@ -119,3 +119,43 @@ func _on_ExternList_item_selected() -> void:
 
     $"DetailView/HBoxContainer/LabelName".text = "%s" % extern_item.name
     $"DetailView/LabelType".text = "Type: %s" % wasm.extern_kind_as_string(extern_item.type)
+
+    match extern_item.type:
+
+        wasm.ExternKind.WASM_EXTERN_FUNC:
+
+            $"DetailView/LabelType".visible = false
+
+            var param_indicator = ""
+
+            if _meta["params"].size() > 0:
+                param_indicator = "..."
+
+            $"DetailView/HBoxContainer/LabelName".text = "%s%s%s" % ["", $"DetailView/HBoxContainer/LabelName".text, "(%s)" % param_indicator]
+
+            var param_description: String = ""
+
+            for param_kind in _meta["params"]:
+                param_description += "    %s,\n" % wasm.ValKindAsString[param_kind]
+
+            param_description = param_description.rstrip(",\n")
+
+            $"DetailView/LabelParamTypes".text = "Parameters:\n%s" % param_description
+
+            $"DetailView/LabelParamTypes".visible = _meta["params"].size() > 0
+
+            var results_description: String = "" #"result: none"
+
+
+            if _meta["results"].size() == 1:
+
+                results_description = "%s" % (wasm.ValKindAsString[_meta["results"][0]])
+
+            elif _meta["results"].size() > 1:
+
+                # TODO: Handle properly
+                results_description = "[...]"
+
+            $"DetailView/HBoxContainer/LabelResultTypes".text = "%s" % results_description
+
+            $"DetailView/HBoxContainer/LabelResultTypes".visible = bool($"DetailView/HBoxContainer/LabelResultTypes".text.length())
