@@ -20,6 +20,11 @@ run/main_scene="res://Main.tscn"
 run/low_processor_mode=true
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1200
+window/size/height=800
+
 [input]
 
 ui_open_file={
