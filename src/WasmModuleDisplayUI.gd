@@ -21,8 +21,6 @@ const MAX_IMPORTS_TO_DISPLAY: int = MAX_EXPORTS_TO_DISPLAY
 # TODO: Pass loaded module instead?
 func display_exploded_wasm_module(wasm_file_path: String):
 
-    prints("Selected file:", wasm_file_path)
-
     UI_EXTERN_LIST.clear()
 
     UI_EXTERN_LIST.set_column_min_width(0, 8)
