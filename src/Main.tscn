@@ -5,23 +5,23 @@
 [ext_resource path="res://DialogBusyOverlay.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/open_sans_semibold__large.tres" type="DynamicFont" id=4]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 25.0
 content_margin_top = 10.0
 content_margin_bottom = 5.0
 bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 
-[sub_resource type="InputEventAction" id=1]
+[sub_resource type="InputEventAction" id=2]
 action = "ui_open_file"
 pressed = true
 
-[sub_resource type="ShortCut" id=2]
-shortcut = SubResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.66, 0.61, 0.97, 1 )
 
 [node name="MainUI" type="Control"]
@@ -54,7 +54,7 @@ __meta__ = {
 margin_right = 1024.0
 margin_bottom = 60.0
 size_flags_vertical = 0
-custom_styles/normal = SubResource( 5 )
+custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "WASM Exploder"
 
@@ -91,7 +91,7 @@ placeholder_text = ".wasm file path"
 margin_left = 846.0
 margin_right = 974.0
 margin_bottom = 24.0
-shortcut = SubResource( 2 )
+shortcut = SubResource( 3 )
 text = "Open WASM file..."
 
 [node name="WasmModuleDisplayUI" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
@@ -105,8 +105,8 @@ script = ExtResource( 2 )
 margin_right = 485.0
 margin_bottom = 437.0
 size_flags_horizontal = 3
-custom_styles/selected_focus = SubResource( 3 )
-custom_styles/selected = SubResource( 4 )
+custom_styles/selected_focus = SubResource( 4 )
+custom_styles/selected = SubResource( 5 )
 columns = 2
 select_mode = 1
 
