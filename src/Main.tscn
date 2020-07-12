@@ -107,7 +107,7 @@ custom_constants/separation = 25
 script = ExtResource( 2 )
 
 [node name="ExternList" type="Tree" parent="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI"]
-margin_right = 573.0
+margin_right = 562.0
 margin_bottom = 628.0
 size_flags_horizontal = 3
 custom_styles/selected_focus = SubResource( 4 )
@@ -117,7 +117,7 @@ columns = 2
 select_mode = 1
 
 [node name="DetailView" type="VBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI"]
-margin_left = 577.0
+margin_left = 587.0
 margin_right = 1150.0
 margin_bottom = 628.0
 size_flags_horizontal = 3
