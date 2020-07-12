@@ -114,6 +114,7 @@ custom_styles/selected_focus = SubResource( 4 )
 custom_styles/selected = SubResource( 5 )
 custom_fonts/font = ExtResource( 6 )
 columns = 2
+allow_reselect = true
 select_mode = 1
 
 [node name="DetailView" type="VBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI"]
