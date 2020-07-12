@@ -101,3 +101,21 @@ func _resetDetailView():
     $"DetailView/HBoxContainer/LabelName".text = ""
     $"DetailView/LabelType".text = ""
     $"DetailView/LabelParamTypes".text = ""
+
+
+func _on_ExternList_item_selected() -> void:
+
+    var selected_tree_item = UI_EXTERN_LIST.get_next_selected(null)
+
+    self._resetDetailView()
+
+    var extern_item = selected_tree_item.get_metadata(0)
+
+    if extern_item == null:
+        # TODO: Show summary when file name & section titles selected?
+        return
+
+    var _meta: Dictionary = extern_item._meta
+
+    $"DetailView/HBoxContainer/LabelName".text = "%s" % extern_item.name
+    $"DetailView/LabelType".text = "Type: %s" % wasm.extern_kind_as_string(extern_item.type)
