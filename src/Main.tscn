@@ -90,6 +90,7 @@ custom_constants/separation = 25
 [node name="FileSelectionUI" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
 margin_right = 1150.0
 margin_bottom = 33.0
+custom_constants/separation = 10
 
 [node name="WasmFilePath" type="LineEdit" parent="VBoxContainer/MarginContainer/VBoxContainer/FileSelectionUI"]
 margin_right = 1003.0
