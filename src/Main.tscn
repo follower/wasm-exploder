@@ -274,6 +274,7 @@ Material not covered by third party license are (C)opyright 2020 RancidBacon.com
 Licenses for included software components are listed below."
 align = 1
 valign = 1
+autowrap = true
 
 [node name="TextEdit" type="TextEdit" parent="DialogAbout/VBoxContainer"]
 margin_top = 73.0
