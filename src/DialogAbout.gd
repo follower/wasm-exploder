@@ -36,7 +36,7 @@ func dir_contents(path: String):
         while file_name != "":
             if dir.current_is_dir():
                 pass
-            else:
+            elif not file_name.begins_with("."):
                 files_found.append(path.plus_file(file_name))
             file_name = dir.get_next()
     else:
