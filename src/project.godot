@@ -18,7 +18,10 @@ _global_script_class_icons={
 config/name="WASM Exploder"
 run/main_scene="res://Main.tscn"
 run/low_processor_mode=true
-config/icon="res://icon.png"
+boot_splash/image="res://assets/graphics/wasm-exploder-logo--512x512.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0.545098, 0.482353, 0.956863, 1 )
+config/icon="res://assets/graphics/wasm-exploder-logo--512x512.png"
 
 [display]
 
