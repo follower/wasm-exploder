@@ -196,6 +196,7 @@ margin_left = -300.0
 margin_top = -200.0
 margin_right = 300.0
 margin_bottom = 200.0
+theme = ExtResource( 8 )
 popup_exclusive = true
 window_title = "Select WASM File..."
 resizable = true
