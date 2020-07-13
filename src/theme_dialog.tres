@@ -1,7 +1,14 @@
-[gd_resource type="Theme" load_steps=8 format=2]
+[gd_resource type="Theme" load_steps=13 format=2]
 
 [ext_resource path="res://assets/fonts/open_sans_regular__normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/fonts/open_sans_regular__small.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
@@ -24,6 +31,8 @@ expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id=9]
+content_margin_left = 15.0
+content_margin_right = 15.0
 bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 expand_margin_left = 15.0
 expand_margin_right = 15.0
@@ -37,6 +46,23 @@ expand_margin_right = 15.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxFlat" id=16]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
+
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.658824, 0.611765, 0.968627, 1 )
 border_width_top = 20
@@ -44,21 +70,44 @@ border_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 expand_margin_top = 20.0
 
 [resource]
+default_font = ExtResource( 1 )
 Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
-Button/constants/hseparation = 2
+Button/constants/hseparation = 10
 Button/fonts/font = ExtResource( 1 )
-Button/styles/disabled = null
+Button/styles/disabled = SubResource( 13 )
 Button/styles/focus = SubResource( 12 )
 Button/styles/hover = SubResource( 10 )
 Button/styles/normal = SubResource( 9 )
 Button/styles/pressed = SubResource( 11 )
-Dialogs/constants/button_margin = 32
-Dialogs/constants/margin = 8
+Dialogs/constants/button_margin = 40
+Dialogs/constants/margin = 16
 Fonts/fonts/large = null
 Fonts/fonts/normal = null
+Label/colors/font_color = Color( 0.396078, 0.309804, 0.941176, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+OptionButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+OptionButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+OptionButton/constants/arrow_margin = 5
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = SubResource( 17 )
+OptionButton/styles/hover = SubResource( 16 )
+OptionButton/styles/normal = SubResource( 14 )
+OptionButton/styles/pressed = SubResource( 15 )
 Panel/styles/panel = null
 PanelContainer/styles/panel = null
 PopupDialog/styles/panel = null
