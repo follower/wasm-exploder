@@ -268,7 +268,7 @@ margin_right = 750.0
 margin_bottom = 58.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
-custom_constants/line_spacing = 12
+custom_constants/line_spacing = 2
 text = "This WebAssembly binary exploration tool is brought to you by RancidBacon.com.
 Material not covered by third party license are (C)opyright 2020 RancidBacon.com & licensed to you under the MIT license.
 Licenses for included software components are listed below."
