@@ -11,6 +11,10 @@ func _ready():
 
     BUTTON_OPEN_WASM_FILE.grab_focus()
 
+    # Workaround `grab_focus()` apparently also causing `hover` style to display.
+    # TODO: Handle elsewhere and/or better?
+    BUTTON_OPEN_WASM_FILE.notification(BUTTON_OPEN_WASM_FILE.NOTIFICATION_MOUSE_EXIT)
+
 
 func _on_ButtonSelectWasmFile_pressed() -> void:
     $"DialogSelectWasmFile".popup_centered_ratio()
