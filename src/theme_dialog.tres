@@ -3,14 +3,14 @@
 [ext_resource path="res://assets/fonts/open_sans_regular__normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/fonts/open_sans_regular__small.tres" type="DynamicFont" id=2]
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 15.0
 content_margin_right = 15.0
 bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 draw_center = false
 border_width_left = 2
@@ -23,41 +23,41 @@ expand_margin_right = 3.0
 expand_margin_top = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 
 [sub_resource type="StyleBoxFlat" id=9]
 content_margin_left = 15.0
 content_margin_right = 15.0
-bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
-expand_margin_top = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
-expand_margin_top = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxEmpty" id=17]
-
-[sub_resource type="StyleBoxFlat" id=16]
-content_margin_left = 15.0
-content_margin_right = 15.0
-bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
-
-[sub_resource type="StyleBoxFlat" id=14]
-content_margin_left = 15.0
-content_margin_right = 15.0
-bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
-
-[sub_resource type="StyleBoxFlat" id=15]
-content_margin_left = 15.0
-content_margin_right = 15.0
 bg_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.658824, 0.611765, 0.968627, 1 )
 border_width_top = 20
 border_color = Color( 0.396078, 0.309804, 0.941176, 1 )
@@ -71,11 +71,11 @@ Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 15
 Button/fonts/font = ExtResource( 1 )
-Button/styles/disabled = SubResource( 13 )
-Button/styles/focus = SubResource( 12 )
-Button/styles/hover = SubResource( 10 )
-Button/styles/normal = SubResource( 9 )
-Button/styles/pressed = SubResource( 11 )
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 5 )
 Dialogs/constants/button_margin = 40
 Dialogs/constants/margin = 16
 Fonts/fonts/large = null
@@ -98,10 +98,10 @@ OptionButton/constants/hseparation = 2
 OptionButton/fonts/font = null
 OptionButton/icons/arrow = null
 OptionButton/styles/disabled = null
-OptionButton/styles/focus = SubResource( 17 )
-OptionButton/styles/hover = SubResource( 16 )
-OptionButton/styles/normal = SubResource( 14 )
-OptionButton/styles/pressed = SubResource( 15 )
+OptionButton/styles/focus = SubResource( 6 )
+OptionButton/styles/hover = SubResource( 7 )
+OptionButton/styles/normal = SubResource( 8 )
+OptionButton/styles/pressed = SubResource( 9 )
 Panel/styles/panel = null
 PanelContainer/styles/panel = null
 PopupDialog/styles/panel = null
@@ -114,4 +114,4 @@ WindowDialog/constants/title_height = 20
 WindowDialog/fonts/title_font = ExtResource( 2 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
-WindowDialog/styles/panel = SubResource( 7 )
+WindowDialog/styles/panel = SubResource( 10 )

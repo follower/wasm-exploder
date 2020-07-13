@@ -15,7 +15,7 @@ content_margin_top = 10.0
 content_margin_bottom = 5.0
 bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=2]
 content_margin_left = 15.0
 content_margin_right = 15.0
 bg_color = Color( 0.658824, 0.611765, 0.968627, 1 )
@@ -23,20 +23,20 @@ border_width_left = 1
 border_width_right = 1
 border_color = Color( 0.545098, 0.482353, 0.956863, 1 )
 
-[sub_resource type="InputEventAction" id=2]
+[sub_resource type="InputEventAction" id=3]
 action = "ui_open_file"
 pressed = true
 
-[sub_resource type="ShortCut" id=3]
-shortcut = SubResource( 2 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.66, 0.61, 0.97, 1 )
+bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.66, 0.61, 0.97, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
 draw_center = false
 border_width_bottom = 1
@@ -112,9 +112,9 @@ margin_left = 989.0
 margin_right = 1150.0
 margin_bottom = 33.0
 theme = ExtResource( 8 )
-custom_styles/hover = SubResource( 7 )
+custom_styles/hover = SubResource( 2 )
 custom_fonts/font = ExtResource( 5 )
-shortcut = SubResource( 3 )
+shortcut = SubResource( 4 )
 text = "Open WASM file..."
 
 [node name="WasmModuleDisplayUI" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
@@ -129,8 +129,8 @@ script = ExtResource( 2 )
 margin_right = 562.0
 margin_bottom = 628.0
 size_flags_horizontal = 3
-custom_styles/selected_focus = SubResource( 4 )
-custom_styles/selected = SubResource( 5 )
+custom_styles/selected_focus = SubResource( 5 )
+custom_styles/selected = SubResource( 6 )
 custom_fonts/font = ExtResource( 6 )
 columns = 2
 allow_reselect = true
@@ -192,7 +192,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 8
 size_flags_vertical = 10
-custom_styles/normal = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
 text = "About WASM Exploder"
