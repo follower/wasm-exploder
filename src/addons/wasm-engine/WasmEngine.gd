@@ -64,8 +64,10 @@ class WasmEngine:
         # TODO: Handle this better? (And/or support resource paths in Foreigner.)
         var path_to_libwasmtime = Foreigner.library.get_current_dependencies()[0].trim_prefix("res://")
 
+        var WasmEngine_Utils = preload('res://addons/wasm-engine/WasmEngine_Utils.gd')
+
         self._foreigner = Foreigner.new()
-        self._lib  = self._foreigner.open(path_to_libwasmtime)
+        self._lib  = self._foreigner.open(WasmEngine_Utils._get_correct_path(path_to_libwasmtime))
 
         if not self._lib:
             push_error("Unable to load libwasmtime library.")
