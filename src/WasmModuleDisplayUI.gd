@@ -3,7 +3,7 @@ extends Control
 onready var UI_EXTERN_LIST: Tree = self.find_node("ExternList", true, false)
 
 
-var wasm = preload("res://addons/wasm-engine/WasmEngine.gd") # TODO: Handle properly
+var wasm = load("res://addons/wasm-engine/WasmEngine.gd") # TODO: Handle properly
 var wasm_engine
 var module
 
