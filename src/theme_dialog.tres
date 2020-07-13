@@ -4,9 +4,9 @@
 [ext_resource path="res://assets/fonts/open_sans_regular__small.tres" type="DynamicFont" id=2]
 
 [sub_resource type="StyleBoxFlat" id=13]
+content_margin_left = 15.0
+content_margin_right = 15.0
 bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
-expand_margin_left = 15.0
-expand_margin_right = 15.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
@@ -18,15 +18,13 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color( 0.545098, 0.482353, 0.956863, 1 )
-expand_margin_left = 18.0
-expand_margin_right = 18.0
+expand_margin_left = 3.0
+expand_margin_right = 3.0
 expand_margin_top = 5.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.545098, 0.482353, 0.956863, 1 )
-expand_margin_left = 15.0
-expand_margin_right = 15.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
@@ -34,15 +32,11 @@ expand_margin_bottom = 2.0
 content_margin_left = 15.0
 content_margin_right = 15.0
 bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
-expand_margin_left = 15.0
-expand_margin_right = 15.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
-expand_margin_left = 15.0
-expand_margin_right = 15.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
