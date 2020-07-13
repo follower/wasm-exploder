@@ -273,5 +273,6 @@ shortcut_keys_enabled = false
 smooth_scrolling = true
 [connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/FileSelectionUI/ButtonSelectWasmFile" to="." method="_on_ButtonSelectWasmFile_pressed"]
 [connection signal="item_selected" from="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI/ExternList" to="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI" method="_on_ExternList_item_selected"]
+[connection signal="gui_input" from="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI/DetailView/LabelAboutLink" to="." method="_on_LabelAboutLink_gui_input"]
 [connection signal="about_to_show" from="DialogSelectWasmFile" to="." method="_on_DialogSelectWasmFile_about_to_show"]
 [connection signal="file_selected" from="DialogSelectWasmFile" to="." method="_on_DialogSelectWasmFile_file_selected"]

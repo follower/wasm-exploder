@@ -27,3 +27,12 @@ func _on_DialogSelectWasmFile_about_to_show() -> void:
     # Workaround (bug?) where window title seems to get reverted to default "open" value.
 
     $"DialogSelectWasmFile".window_title = "Select WASM File..."
+
+
+func _on_LabelAboutLink_gui_input(event: InputEvent) -> void:
+
+    if event is InputEventMouseButton:
+        if event.pressed and event.button_index == BUTTON_LEFT:
+            get_tree().set_input_as_handled()
+            $"DialogAbout".popup_centered_ratio()
+            $"DialogAbout".grab_focus()
