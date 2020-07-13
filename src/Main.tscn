@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://WasmModuleDisplayUI.gd" type="Script" id=2]
@@ -14,6 +14,14 @@ content_margin_left = 25.0
 content_margin_top = 10.0
 content_margin_bottom = 5.0
 bg_color = Color( 0.396078, 0.309804, 0.941176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.658824, 0.611765, 0.968627, 1 )
+border_width_left = 1
+border_width_right = 1
+border_color = Color( 0.545098, 0.482353, 0.956863, 1 )
 
 [sub_resource type="InputEventAction" id=2]
 action = "ui_open_file"
@@ -103,6 +111,8 @@ placeholder_text = ".wasm file path"
 margin_left = 989.0
 margin_right = 1150.0
 margin_bottom = 33.0
+theme = ExtResource( 8 )
+custom_styles/hover = SubResource( 7 )
 custom_fonts/font = ExtResource( 5 )
 shortcut = SubResource( 3 )
 text = "Open WASM file..."
