@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/fonts/open_sans_semibold__large.tres" type="DynamicFont" id=4]
 [ext_resource path="res://assets/fonts/open_sans_regular__normal.tres" type="DynamicFont" id=5]
 [ext_resource path="res://assets/fonts/open_sans_regular__small.tres" type="DynamicFont" id=6]
-[ext_resource path="res://DialogAbout.gd" type="Script" id=7]
+[ext_resource path="res://DialogAbout.tscn" type="PackedScene" id=7]
 [ext_resource path="res://theme_dialog.tres" type="Theme" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -234,60 +234,7 @@ text = "Loading..."
 align = 1
 valign = 1
 
-[node name="DialogAbout" type="AcceptDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -400.0
-margin_top = -300.0
-margin_right = 400.0
-margin_bottom = 300.0
-theme = ExtResource( 8 )
-popup_exclusive = true
-window_title = "About WASM Exploder"
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="DialogAbout"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 16.0
-margin_top = 16.0
-margin_right = -16.0
-margin_bottom = -55.0
-size_flags_vertical = 0
-custom_constants/separation = 15
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="DialogAbout/VBoxContainer"]
-margin_right = 768.0
-margin_bottom = 98.0
-size_flags_vertical = 0
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.105882, 0.0941176, 0.172549, 1 )
-custom_constants/line_spacing = 2
-text = "This WebAssembly binary exploration tool is brought to you by RancidBacon.com.
-Material not covered by third party license are (C)opyright 2020 RancidBacon.com & licensed to you under the MIT license.
-Licenses for included software components are listed below."
-align = 1
-valign = 1
-autowrap = true
-
-[node name="TextEdit" type="TextEdit" parent="DialogAbout/VBoxContainer"]
-margin_top = 113.0
-margin_right = 768.0
-margin_bottom = 529.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-readonly = true
-context_menu_enabled = false
-shortcut_keys_enabled = false
-smooth_scrolling = true
+[node name="DialogAbout" parent="." instance=ExtResource( 7 )]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/FileSelectionUI/ButtonSelectWasmFile" to="." method="_on_ButtonSelectWasmFile_pressed"]
 [connection signal="item_selected" from="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI/ExternList" to="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI" method="_on_ExternList_item_selected"]
 [connection signal="gui_input" from="VBoxContainer/MarginContainer/VBoxContainer/WasmModuleDisplayUI/DetailView/LabelAboutLink" to="." method="_on_LabelAboutLink_gui_input"]
